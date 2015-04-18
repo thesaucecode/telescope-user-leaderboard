@@ -1,0 +1,13 @@
+<template name="leaderboardUserItem">
+  <tr class="user">
+    <td>{{> avatar user=this shape="circle"}}</td>
+    <td>
+      <a href="{{getProfileUrl}}">{{displayName}}</a>
+    </td>
+    <td>{{createdAtFormatted}}</td>
+    <td>{{postCount}}</td>
+    <td>{{commentCount}}</td>
+    <td>{{getKarma}}</td>
+    <td>{{getAwesomeness}}</td>
+  </tr>
+</template>

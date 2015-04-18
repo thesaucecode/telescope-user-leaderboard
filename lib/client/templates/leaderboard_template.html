@@ -1,0 +1,34 @@
+<template name="leaderboard">
+  <h2>{{communityName}} User Leaderboard</h2>
+  <h5>How do you stack up?</h5>
+  {{> UI.dynamic template=leaderboard_table}}
+</template>
+
+<template name="leaderboardTable">
+  <div class="grid grid-module">
+    <div class="user-table grid-block">
+      <table>
+        <thead>
+          <tr>
+            <td colspan="2">{{_ "name"}}</td>
+            <td>{{_ "member_since"}}</td>
+            <td>{{_ "posts"}}</td>
+            <td>{{_ "comments_"}}</td>
+            <td>{{_ "karma"}}</td>
+            <td>{{_ "awesomeness"}}</td>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each users}}
+            {{> UI.dynamic template=user_item}}
+          {{/each}}
+        </tbody>
+      </table>
+      <!-- <div class="grid more-button {{#if allUsersLoaded}} hidden {{/if}}">
+        <a class="more-link" href="{{loadMoreUrl}}">{{_ "load_more"}}</a>
+      </div> -->
+    </div>
+  </div>
+</template>
+
+
