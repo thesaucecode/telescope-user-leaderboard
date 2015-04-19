@@ -60,6 +60,7 @@ Package.onUse(function (api) {
 
   api.add_files([
     'lib/server/migration.js',
+    'lib/server/methods.js',
     'lib/server/publications.js'
   ], ['server']);
 
